@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HCCC Video Menu</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #FDF6EC; /* beige */
+    }
+
+    .navbar {
+      display: flex;
+      background-color: #4E342E; /* dark brown */
+      padding: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      background-color: #8B0000;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 0.25rem 0.5rem;
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background-color: #E65100; /* orange */
+    }
+
+    .content-section {
+      display: none;
+      padding: 2rem;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .category-title {
+      font-size: 1.6rem;
+      color: #4E342E;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .subcategory-toggle {
+      background-color: #FFE0B2;
+      color: #4E342E;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .playlist-links {
+      display: none;
+      margin-left: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .playlist-links a {
+      display: block;
+      margin: 0.25rem 0;
+      color: #E65100;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .playlist-links a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #E65100;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 HCCC Video Menu</h1>
+
+  <div class="navbar">
+    <button class="nav-btn active" onclick="showSection('karaoke')">Karaoke with Lyrics</button>
+    <button class="nav-btn" onclick="showSection('animation')">Children's Animation</button>
+    <button class="nav-btn" onclick="showSection('serial')">Hindi TV Serial</button>
+  </div>
+
+  <!-- Karaoke Section -->
+  <div id="karaoke" class="content-section active">
+    <div class="category-title">🎤 Karaoke with Lyrics</div>
+
+    <!-- Hindi Karaoke -->
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Hindi Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BmHSygt52cibXI4BxKF-ovk">Ravi 1</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BnARI5ZMZOvNqpz3zooHvBw">Ravi Favorites</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25Bn6t2CUZJR4DPfuRNB7EWHp">Hindi Karakoke Songs with Female Voice</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BnkR9vVlAlXlo30DBTKCA_K">Lavani</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BnzAwL4jFll7KDDV0fhEhC4">Bhav Geet Bhakti Geet</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BljFJgS11RshD-u0GbHSDeo">Hindi Karaoke Songs with Gents Voice</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BmXNtCOd3JrbE4B0OoF3a9Y">Hindi Ladies Karaoke Songs</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BnhHEJ8Ejl1UBIvIqExs7DE">Hindi Duet Karaoke Songs</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BkjmXHGB--3cKFTyG-iqRXv">Hindi Karaoke Songs</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4akS7i07UxiCe8qN5XM9lVk5">Duet Karaoke With Female Voice</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4ak1RsHPTWuWzLJY4_OTd_p-">Alka Yagnik Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4amC0PRQYHQxr6N-9LOrLt8_">Asha Ji Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4anwSuiz1R4_6HHw518DDyHF">Arijit Singh Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4amvPDn-bwZ7nPWGZgfGaqeS">Lata Ji</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4amqar2AbTlMh3RQxDM8GyJ9">Unplugged and Remixed Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4alblkBTq_TBP25H3f-ejrmr">Sonu Nigam Karaoke</a>
+      <a href="https://www.youtube.com/watch?v=o5HDFXol6dU&list=PLR-KlU3SZ4akbyF4hR58y-E8_e0aZ8FEA">Aake Teri Bahon Mein </a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4ak0LJwQ6W8JfSPhj-gqlVxS">Mukesh Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4akICmzyzyrdxrWcd_F1CvGS">Mohammed Rafi Karaoki</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4akK1ui0gUljoXBid2mZDZTL">Udit Narayan Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4anhc4xr2HEJJTDvtIla8El6">Yesudas Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4anVhAgKyxoPIG7haaT4uQ-e">Kumar Sanu Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4akUrmv_AWcwwraNEhTdU23g">Kishore Kumar Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4anYmGG1eyFbz44p-7BbBbVP">Patriotic Songds Karaoke</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Marathi Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25BkIymMA0VRc_Pqo6PP7vD90">Marathi Karaoke Songs</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25Bl3-dUovWL7Ghq5kP3BXZwM">Marathi Duet Karaoke Songs</a>
+      <a href="https://www.youtube.com/playlist?list=PLiNOWmcC25Bl0RxEPv5AHHvi0BsOHLmXU">Marathi Ladies Karaoke Songs</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Telugu Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://youtu.be/swfgUJNmfxw?si=X9HQ27omJDVQQwzR">Neeli Neeli Aakasam Karaoke</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Tamil Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://youtube.com/playlist?list=PLUg6vO2_neOQm9inX7iMED4fTm6NKVhbC&si=K5QQoAGkyJCFOUBo">Live in Concert Tamil</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Kannada Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://youtu.be/DPj446UgdZw?si=duwPCAVjH0dCe-_5">Nammura Mandara Hoove Karaoke</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Malayalam Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://youtu.be/qD62yaVJRvE?si=JdnSHhzFGAjgdEHD">ആനയ്ക്കെടുപ്പത് പൊന്നുണ്ടേ - ധനം</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Bhajan Karaoke</button>
+    <div class="playlist-links">
+      <a href="https://www.youtube.com/watch?v=BsengmsGe58&list=PLR-KlU3SZ4amrm_OfJRVKbUaQRkiWhCaW">Mann Mera Mandir Shiv Meri Pooja</a>
+      <a href="https://www.youtube.com/playlist?list=PLR-KlU3SZ4anlR_0toRllYrcCOgBQkek0">Bhajan Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PL1QYDeXrOjaxvfGpmVwKAopBhzPSNyeFw">All Bhajan Karaoke</a>
+      <a href="https://www.youtube.com/playlist?list=PL1QYDeXrOjayzm2WNZUKZKnDfvw5YBell">Desh Bhakti Geet</a>
+    </div>
+  </div>
+
+  <!-- Animation Section -->
+  <div id="animation" class="content-section">
+    <div class="category-title">👶 Children's Animation</div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">English Animation</button>
+    <div class="playlist-links">
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vJRSiYkB9fKH8eCqoetkj7m">Panchatantra Tales in English</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vL7M2J3sRnrHGMx_Pz-zsmM">Tenali Raman Intelligent Stories</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vKb8-lYLiXclyxVbdfhfaNf">Little Krishna Stories Season 1</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vLTO2NozoIh30z6IBN_W497">Bal Ganesh Stories</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vIeUpZyiTfDSjo0k8e6BseO">Akbar Birbal Stories Season 1</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vLuDnAX5Z564QXGPrhZe509">Ramayan in English</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vJ1-I1QE5hbGp2dYfFhA5tc">Mythological Stories in English</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vLpE0VqZ9duCxiUiVm0SW8x">Sri Krishna Season 1</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vKCYaJ1oVFdSqJOS-8X7GEP">Krishna vs Demons</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vIRvl9ldSPbKp-P_SNnkOpo">Hanuman Stories Season 1</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vLbg4kqFAjOyS8G5aJXkcO-">Mythological Stories</a>
+      <a href="https://www.youtube.com/playlist?list=PLo4IxNDO21vLG6vKc7Sp5RuFniZUUw66z">Animated Ganesha Stories</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Hindi Animation</button>
+    <div class="playlist-links">
+      <a href="https://youtube.com/playlist?list=PL6vCwGtCTVtNMDecJds9swB0QeH9kdmAT&si=cKYkuHM8yKKnR5Qh">Tenali Raman Stories</a>
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Tamil Animation</button>
+    <div class="playlist-links">
+    </div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">Telugu Animation</button>
+    <div class="playlist-links">
+      <a href="https://youtube.com/playlist?list=PLETJg2mXWzmMu9KsJ8m2uFedNWKgpJpxO&si=0AKWPztcTYjqTtv5">Telugu Rhymes</a>
+    </div>
+  </div>
+
+  <!-- TV Serial Section -->
+  <div id="serial" class="content-section">
+    <div class="category-title">📺 TV Serials</div>
+
+    <button class="subcategory-toggle" onclick="toggleLinks(this)">B R Chopra Mahabharata</button>
+    <div class="playlist-links">
+      <a href="https://youtube.com/playlist?list=PLa6CHPhFNfadNcnVZRXa6csHL5sFdkwmV&si=xyeGb-AIb_tLjVGM">B.R. Chopra Mahabharata: All Episodes with English Subtitles</a>
+    </div>
+  </div>
+
+  <!-- JS for tab + collapsible toggles -->
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function toggleLinks(button) {
+      const linksDiv = button.nextElementSibling;
+      if (linksDiv.style.display === "block") {
+        linksDiv.style.display = "none";
+      } else {
+        linksDiv.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
